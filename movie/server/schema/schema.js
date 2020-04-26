@@ -16,7 +16,7 @@ const Director = require('../models/Director');
 const MovieType = new GraphQLObjectType({
     name: "Movie",
     fields: () => ({
-        id: { type: GraphQLID },
+        id: { type: GraphQLString },
         title: { type: GraphQLString },
         description: { type: GraphQLString },
         year: { type: GraphQLInt },
@@ -32,7 +32,7 @@ const MovieType = new GraphQLObjectType({
 const DirectorType = new GraphQLObjectType({
     name: "Director",
     fields: () => ({
-        id: { type: GraphQLID },
+        id: { type: GraphQLString },
         name: { type: GraphQLString },
         birth: { type: GraphQLInt },
         movies: {
