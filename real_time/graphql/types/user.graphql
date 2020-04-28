@@ -1,0 +1,26 @@
+type Query {
+    user(id: ID!):User!,
+    users:[User!]!
+}
+
+type User {
+    id:ID!,
+    username:String!,
+    createAt:String
+    snaps:[Snap!]!
+}
+
+type Mutation {
+     createUser(data: CretaUserInput!): Token
+     singIn(data: SinginUserInput!): Token
+}
+
+input CretaUserInput {
+    username:String!,
+    password:String!
+}
+
+input SinginUserInput {
+    username:String!,
+    password:String!
+}
